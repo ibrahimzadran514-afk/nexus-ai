@@ -115,7 +115,7 @@ RESPONSE FORMAT RULES:
   };
 
   const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -147,7 +147,7 @@ async function handleFileGeneration(fileType, userMessage, messages, res) {
   // Step 1: Use Gemini to plan the file content
   const planPrompt = buildFilePlanPrompt(fileType, userMessage);
   const planResponse = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
