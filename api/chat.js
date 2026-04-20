@@ -1,4 +1,4 @@
-// api/chat.js — Main AI chat handler
+// api/chat.js — Main AI chat handler v2
 // Routes between: regular Q&A, file generation (e2b), and image generation (Together AI)
 
 export default async function handler(req, res) {
